@@ -1,0 +1,39 @@
+$palettes: (
+  black: (
+    base: #000,
+    transparent: rgba(0, 0, 0, 0.5),
+    demo: rgba(0, 0, 0, 0.8)
+  ),
+  white: (
+    base: #fff,
+    transparent: rgba(255, 255, 255, 0.8)
+  ),
+  gray: (
+    lightest: #fbfbfb,
+    lighter: #f3f3f3,
+    light: #e7e7e7,
+    base: #d8d8d8,
+    dark: #aeaeae,
+    darker: #838383,
+    darkest: #454545
+  ),
+  red: (
+    lightest: #ffcccc
+  ),
+  shadow: (
+    light: rgba(0, 0, 0, 0.08),
+    base: rgba(0, 0, 0, 0.12),
+    dark: rgba(0, 0, 0, 0.5)
+  ),
+  relief: (
+    base: #dd2a2f,
+    red: #dd2a2f,
+    maroon: #a01a1e,
+    orange: #f36c00,
+    green: #49a942
+  )
+);
+
+@function palette($color, $tone: 'base') {
+  @return map-get(map-get($palettes, $color), $tone);
+}

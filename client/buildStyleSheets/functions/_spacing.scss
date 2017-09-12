@@ -1,0 +1,7 @@
+@function spacing($space) {
+  @if ($space % 5 == 0) {
+    @return ($space) + px;
+  } @else {
+    @error 'Spacing should be a multiple of 5';
+  }
+}

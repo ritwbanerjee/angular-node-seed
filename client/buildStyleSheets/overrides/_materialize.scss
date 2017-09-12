@@ -1,0 +1,124 @@
+@import '../_palette';
+
+re-captcha {
+  padding: 20px !important;
+}
+
+pre {
+  font-family: Roboto;
+}
+
+.no-gutter > [class*='col-'] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.no-col-gutter {
+  margin: 0;
+  padding: 0;
+}
+
+.no-row-bottom-spacing {
+  margin-bottom: 0;
+}
+
+// Row with equal height columns (used for Dashboard tiles).
+.row-equal-height {
+  display: flex;
+
+  //applies display: flex to all direct children of row-equal-height (first tier Cols)
+  > div {
+    display: flex;
+  }
+
+  &.align-center {
+    line-height: 1;
+    align-items: center;
+  }
+
+  &.two-col {
+    flex-basis: 50%;
+    flex-wrap: wrap;
+  }
+
+  // .col {
+  //   // end incomplete 2 col grids to the left
+  //   &.s6, &.m6, &.l6 {
+  //     margin-left: 0;
+  //   }
+
+  //   // end incomplete 3 col grids to the left
+  //   &.s4, &.m4, &.l4 {
+  //     margin-left: 0;
+  //   }
+
+  // }
+}
+
+// Always hide input[type=range] default tooltip
+:host /deep/ input[type=range] + .thumb {
+  display: none;
+}
+
+body.no-overflow {
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow: hidden;
+}
+
+nav ul a:hover {
+  background-color: transparent;
+}
+
+.modal {
+  max-height: 90%;
+  
+  @media(max-width: 468px) {
+    width: 100%;
+    position: absolute;
+    top: 0 !important;
+    bottom: 0 !important;
+    max-height: 100%;
+  }
+}
+
+.header .login-modal .active {
+  border-bottom: none;
+}
+
+
+input:not([type]):focus:not([readonly])+label, input[type=text]:not(.browser-default):focus:not([readonly])+label, input[type=password]:not(.browser-default):focus:not([readonly])+label, input[type=email]:not(.browser-default):focus:not([readonly])+label, input[type=url]:not(.browser-default):focus:not([readonly])+label, input[type=time]:not(.browser-default):focus:not([readonly])+label, input[type=date]:not(.browser-default):focus:not([readonly])+label, input[type=datetime]:not(.browser-default):focus:not([readonly])+label, input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, input[type=tel]:not(.browser-default):focus:not([readonly])+label, input[type=number]:not(.browser-default):focus:not([readonly])+label, input[type=search]:not(.browser-default):focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
+  color: red;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid red;
+  box-shadow: 0 1px 0 0 red;
+}
+
+a, .dropdown-content li>a, .dropdown-content li>span {
+  color: palette(relief, red);
+  cursor: pointer;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after,[type="radio"]:checked+label:after,
+.switch label input[type=checkbox]:checked+.lever,
+ [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after{
+  background-color: palette(relief, red);
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after{
+  border : 2px solid palette(relief, red);
+}
+
+
+[type="checkbox"]:checked+label:before {
+  border-right: 2px solid palette(relief, red);
+  border-bottom: 2px solid palette(relief, red);
+}
+
+nav ul li.active {
+  background-color: palette(gray, lightest);
+  border-bottom: 2px solid palette(relief, red);
+}

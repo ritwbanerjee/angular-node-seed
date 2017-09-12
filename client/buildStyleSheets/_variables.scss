@@ -1,0 +1,77 @@
+// Screen sizes
+$screen-xs: 480px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1200px;
+
+// Font family
+$fy-font-sans-serif: 'Roboto', 'Arial', sans-serif;
+
+// Font sizes
+$font-size-largest: 40px;
+$font-size-larger: 28px;
+$font-size-large: 24px;
+$font-size-notifications: 20px;
+$font-size-medium: 18px;
+$font-size-small: 16px;
+$font-size-smaller: 14px;
+$font-size-smallest: 12px;
+
+//Letter spacing
+$font-size-letter-spacing-small: 0.3px;
+
+// Custom font sizes
+$font-size-card-numbers: 36px;
+$font-size-mobile-card-title: 20px;
+
+// Card styles
+$card-spacing: 40px;
+$card-border-radius: 8px;
+$card-box-shadow: 6px;
+$card-image-height: 200px;
+$card-button-border-radius: 5px;
+
+// Z-Index (Z-Index should be kept low and incremental, don't exceed 10)
+$z-index-card-header: 2;
+$z-index-header-alert-message: 4;
+$z-index-header: 5;
+$z-index-modal-backdrop: 6;
+$z-index-modal: 7;
+$z-index-glass-wall: 8;
+$z-index-chat-back-drop: 9;
+$z-index-loading-dots: 10;
+
+// Custom
+$slider-border-radius: 1px;
+$slider-track-radius: 16px;
+$button-border-radius: 30px;
+
+// Shadows
+$element-shadow-light: 0 2px 2px 0 palette(shadow, light);
+$element-shadow: 0 0 8px 0 palette(shadow);
+$element-shadow-dark: 0 2px 6px 0 palette(shadow, dark);
+$hover-shadow: 0 5px 10px palette(shadow);
+$dashboard-tile-shadow: 0 0 15px palette(shadow);
+
+// Button Dimensions
+$button-padding: 0 35px;
+
+// Layout
+$header-height: 65px;
+$subnav-height: 50px;
+$footer-height: 62px;
+
+//Claudia
+$claudia-image-dimension: 50px;
+$claudia-container-width: 350px;
+$claudia-information-container-width: 270px;
+
+//Baseline Dropdown Variables
+$dropdown-height: 40px;
+$dropdown-border-radius: 20px;
+
+// Headers
+$header-margin: 5px;
+
+//Spacing
+$spacing: 5px;

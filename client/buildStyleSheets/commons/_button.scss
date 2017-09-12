@@ -1,0 +1,58 @@
+@import '../_palette';
+// MAIN BUTTONS
+button {
+  padding: spacing(10) spacing(20) !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  border: 1px solid transparent !important;
+  font-size: $font-size-small !important;
+  
+  &:focus {
+    background-color: transparent;
+    border: 1px dotted palette(gray, darkest);
+  }
+
+  &.primary {
+    color: palette(white);
+    background: palette(relief, red);
+  }
+
+  &.secondary,
+  &.tertiary {
+    background-color: palette(white);
+  }
+
+  &.tertiary {
+    border-color: palette(relief, red);
+    color: palette(relief, red);
+  }
+
+  &.skip {
+    color: palette(relief, red);
+  }
+
+  &.save {
+    color: palette(relief, green);
+  }
+
+  // Rounded "Pill" style modifier
+  &.pill {
+    padding-top: spacing(5);
+    padding-bottom: spacing(5);
+    border-radius: $button-border-radius;
+  }
+  &.no-border {
+    border: none;
+    background: none;
+    font-weight: 700;
+  }
+
+  // DISABLED state
+  &:disabled {
+    cursor: not-allowed !important;
+    background-color: palette(red, lightest);
+    color: palette(white);
+    border-color: palette(gray, base);
+  }
+
+}
