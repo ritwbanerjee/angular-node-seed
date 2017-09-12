@@ -7,7 +7,6 @@ var webpack = require('webpack');
 var helpers = require('./helpers');
 
 module.exports = webpackMerge(commonConfig, {
-    devtool: 'inline-source-map',
     
     entry: {
         vendor: [

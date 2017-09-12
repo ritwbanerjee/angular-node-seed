@@ -4,13 +4,16 @@ const redis         = require('redis'),
       redisStore    = require('connect-redis')(session),
       redisClient   = redis.createClient(),
       uuid          = require('uuid'),  
-      cookieParser  = require('cookie-parser');
+      cookieParser  = require('cookie-parser'),
+      config        = require('../config');
+
+module.exports = redisClient;
 
 module.exports = function(app) {
 
   const sessionStore = new redisStore({ 
-    host: '127.0.0.1',
-    port: 6379,
+    host: config.redis.ip,
+    port: config.redis.port,
     client: redisClient,
     ttl :  3600000
   });
@@ -27,16 +30,22 @@ module.exports = function(app) {
   });
 
   return {
-    set: function(obj) {
-      redisClient.set(obj.id, obj.token);
+    set: function(key, value) {
+      redisClient.set(key, value);
     },
 
     get: function(key) {
-      try {
-        return redisClient.get(key);
-      } catch(err) {
-        return 'Key not found';
-      }
+      
+      return new Promise((resolve, reject) => {
+        redisClient.get(key, (err, response) => {
+          if(err) {
+            reject(err);
+          } else {
+            resolve(JSON.parse(response));
+          }
+        })
+      })
+      
     },
 
     sessionStore

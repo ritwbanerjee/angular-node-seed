@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "rm -rf dist && concurrently \"webpack --watch --colors\" \"nodemon server\"",
-    "build": "rm -rf dist && concurrently \"webpack --watch --colors\""
+    "start": "rm -rf dist && concurrently \"webpack --watch --colors\" \"nodemon server\""
   },
   "dependencies": {
     "@agm/core": "^1.0.0-beta.0",

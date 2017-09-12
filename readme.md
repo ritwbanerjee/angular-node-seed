@@ -23,6 +23,12 @@ Require it by require(path_to_config);
 
 ### Server side storage
 Redis server
+app.get('redis') will give you the instance of redis
+app.set(key, value) can be used to set anything in redis
+app.get(key) can be used to fetch the value
+
+NOTE: data stored in redis is globally accessible across all requests. Do not store profile related info in redis
+
 
 ### Created By:
 Ritwik Banerjee
